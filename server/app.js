@@ -21,10 +21,10 @@ module.exports = {
         var path = url.parse(request.url).pathname;
         switch(path){
             case '/':
-                renderHTML('./index.html',response);
+                renderHTML('../client/index.html',response);
                 break;
             case '/vr':
-                renderHTML('./vr.html', response);
+                renderHTML('../client/vr.html', response);
                 break;
             default:
                 response.writeHead(404);
