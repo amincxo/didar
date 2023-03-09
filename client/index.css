@@ -1,0 +1,202 @@
+
+
+@font-face {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    src: url();
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* d-flex flex-column justify-content-center w-100 h-100 */
+@media only screen and (min-width: 800px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .background {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    /* d-flex flex-column justify-content-center align-items-center */
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        border: 1px solid white ;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        width: 60%;
+    }
+    .title {
+        margin: 20px;
+    }
+
+    .cards {
+        display: flex;
+        direction: rtl;
+        flex-wrap: wrap;
+    }
+    .card {
+        display: flex;
+        margin: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white ;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 15px;
+    }
+
+    .card img {
+        width: 300px;
+        border-radius: 10px;
+    }
+    .card h3 {
+        margin-top: 20px;
+    }
+    .card p {
+        margin: 10px;
+        width: 250px;
+    }
+    .card button {
+        color: whitesmoke;
+        font-size: medium;
+        background-color: #e73c7e;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 600px ) {
+    .box {
+        flex-wrap: wrap;
+    }
+    .background {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    /* d-flex flex-column justify-content-center align-items-center */
+    .gradient-border {
+        --borderWidth: 1px;
+        background: #1D1F20;
+        position: relative;
+        border-radius: var(--borderWidth);
+      }
+      .gradient-border:after {
+        content: '';
+        position: absolute;
+        top: calc(-1 * var(--borderWidth));
+        left: calc(-1 * var(--borderWidth));
+        height: calc(100% + var(--borderWidth) * 2);
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        border-radius: calc(2 * var(--borderWidth));
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+      }
+      
+      
+      @keyframes animatedgradient {
+          0% {
+              background-position: 0% 50%;
+          }
+          50% {
+              background-position: 100% 50%;
+          }
+          100% {
+              background-position: 0% 50%;
+          }
+      }
+      
+
+    .title {
+        margin-top:140px;
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 90%;
+        border-radius: 10px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        direction: rtl;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white ;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .boxTitle {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .card img {
+        width: 200px;
+        border-radius: 10px;
+    }
+    .card h3 {
+        margin-top: 20px;
+    }
+    .card p {
+        margin: 10px;
+        width: 250px;
+    }
+    .card button {
+        color: whitesmoke;
+        font-size: medium;
+        background-color: #e73c7e;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 800px ) {
+    .box {
+        flex-wrap: wrap;
+    }
+}
